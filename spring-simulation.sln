@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spring-simulation", "spring-simulation.csproj", "{7DDA9BFB-5A06-ED7E-5225-25FD4E1423BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spring-simulation.Editor", "spring-simulation.Editor.csproj", "{E989CEDD-1743-FB63-6B33-24E5D575C0E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DDA9BFB-5A06-ED7E-5225-25FD4E1423BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DDA9BFB-5A06-ED7E-5225-25FD4E1423BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DDA9BFB-5A06-ED7E-5225-25FD4E1423BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DDA9BFB-5A06-ED7E-5225-25FD4E1423BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E989CEDD-1743-FB63-6B33-24E5D575C0E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E989CEDD-1743-FB63-6B33-24E5D575C0E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E989CEDD-1743-FB63-6B33-24E5D575C0E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E989CEDD-1743-FB63-6B33-24E5D575C0E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
