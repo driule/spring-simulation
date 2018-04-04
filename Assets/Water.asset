@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b3b3073315a4191bcde3b6ca445dc7, type: 3}
   m_Name: Water
   m_EditorClassIdentifier: 
-  resolution: 1
-  restDensity: 1000
+  resolution: 0.05
+  restDensity: 350
   smoothing: 1.5
   viscosity: 0.05
   surfaceTension: 0.1
