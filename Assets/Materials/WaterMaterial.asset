@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: WaterMaterial
   m_EditorClassIdentifier: 
   resolution: 0.05
-  restDensity: 350
+  restDensity: 100
   smoothing: 1.5
-  viscosity: 0.05
+  viscosity: 0
   surfaceTension: 0.1
   buoyancy: -1
   atmosphericDrag: 0
