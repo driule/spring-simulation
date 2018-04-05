@@ -337,6 +337,7 @@
     <Compile Include="Assets\Obi\Scripts\Utils\ObiProfiler.cs" />
     <Compile Include="Assets\Obi\Scripts\Utils\ObiUtils.cs" />
     <Compile Include="Assets\Scripts\BezierCurve.cs" />
+    <Compile Include="Assets\Scripts\FluidController.cs" />
     <Compile Include="Assets\Scripts\Rope.cs" />
     <Compile Include="Assets\Scripts\SpringController.cs" />
     <Compile Include="Assets\Scripts\SpringMeshRenderer.cs" />
