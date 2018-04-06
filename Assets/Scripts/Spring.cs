@@ -19,8 +19,9 @@ public class Spring : MonoBehaviour
     public float restLength;
     [Range(0.0f, 1.0f)]
     public float dampeningCoefficient;
+    [Range(0.0f, 25.0f)]
+    public float gravity = 1.0f;
 
-    private Vector3 gravity = new Vector3(0, -9.8f, 0);
     private Vector3 platformAnchor;
     private Vector3 loadAnchor;
 
@@ -70,11 +71,11 @@ public class Spring : MonoBehaviour
         // Apply force on the rigidbody based on the inverse masses
         if (this.platform.GetComponent<FixedJoint>())
         {
-            this.load.GetComponent<Rigidbody>().AddForce(force + gravity);
+            this.load.GetComponent<Rigidbody>().AddForce(force);
         }
         else if (this.load.GetComponent<FixedJoint>())
         {
-            this.platform.GetComponent<Rigidbody>().AddForce(-force + gravity);
+            this.platform.GetComponent<Rigidbody>().AddForce(-force);
         }
         else
         {
@@ -82,14 +83,16 @@ public class Spring : MonoBehaviour
             float loadInverseMass = 1 - (this.load.GetComponent<Rigidbody>().mass / totalMass);
             float platformInverseMass = 1 - (this.platform.GetComponent<Rigidbody>().mass / totalMass);
 
-            this.load.GetComponent<Rigidbody>().AddForce(force * loadInverseMass + gravity);
-            this.platform.GetComponent<Rigidbody>().AddForce(-force * platformInverseMass + gravity);
-        }     
+            this.load.GetComponent<Rigidbody>().AddForce(force * loadInverseMass);
+            this.platform.GetComponent<Rigidbody>().AddForce(-force * platformInverseMass);
+        }
+        this.load.GetComponent<Rigidbody>().AddForce(new Vector3(0, -gravity, 0));
     }
 
     void Render()
     {
-        MeshFilter spring = GetComponent<MeshFilter>();       
+        MeshFilter spring = GetComponent<MeshFilter>();
+        MeshCollider springCollider = GetComponent<MeshCollider>();
 
         Vector3[] vertices = new Vector3[]
         {
@@ -135,5 +138,8 @@ public class Spring : MonoBehaviour
         spring.mesh.vertices = vertices;
         spring.mesh.triangles = triangles;
         spring.mesh.RecalculateNormals();
+        spring.mesh.RecalculateBounds();
+
+        springCollider.sharedMesh = spring.mesh;
     }
 }
