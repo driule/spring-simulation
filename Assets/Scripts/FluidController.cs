@@ -33,6 +33,7 @@ public class FluidController : MonoBehaviour {
         {
             this.fluidMaterial.viscosity = this.fluidViscositySlider.value;
             this.solver.UpdateEmitterMaterials();
+            this.fluidEmmiter.KillAll();
         }
     }
 }
