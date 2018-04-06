@@ -8,6 +8,7 @@ public class FluidController : MonoBehaviour {
 
     public ObiEmitterMaterialFluid fluidMaterial;
     public ObiEmitter fluidEmmiter;
+    public ObiSolver solver;
 
     public Slider fluidViscositySlider;
 
@@ -28,6 +29,10 @@ public class FluidController : MonoBehaviour {
 
     void setFluidValues()
     {
-        this.fluidMaterial.viscosity = this.fluidViscositySlider.value;
+        if (this.fluidMaterial.viscosity != this.fluidViscositySlider.value)
+        {
+            this.fluidMaterial.viscosity = this.fluidViscositySlider.value;
+            this.solver.UpdateEmitterMaterials();
+        }
     }
 }

@@ -140,6 +140,6 @@ public class Spring : MonoBehaviour
         spring.mesh.RecalculateNormals();
         spring.mesh.RecalculateBounds();
 
-        springCollider.sharedMesh = spring.mesh;
+        //springCollider.sharedMesh = spring.mesh;
     }
 }
