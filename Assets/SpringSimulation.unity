@@ -12983,13 +12983,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 196381475}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7789e62c280139478f5e3bf88cd6817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fluidMaterial: {fileID: 11400000, guid: d0ab7a76c8b7c79489595915ebb8abeb, type: 2}
   fluidEmmiter: {fileID: 196381479}
+  solver: {fileID: 196381476}
   fluidViscositySlider: {fileID: 1484309282}
 --- !u!1 &202891399
 GameObject:
