@@ -458,7 +458,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 111717941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.49, y: 1.76, z: -7.505474}
+  m_LocalPosition: {x: -3.49, y: 2.55, z: -7.505474}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 361378349}
@@ -13027,7 +13027,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e1cfb97847c153499f2437f05b1e3cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13308,6 +13308,7 @@ GameObject:
   - component: {fileID: 254562074}
   - component: {fileID: 254562073}
   - component: {fileID: 254562077}
+  - component: {fileID: 254562078}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -13396,6 +13397,17 @@ MonoBehaviour:
   thicknessCutoff: 1.2
   colorMaterial: {fileID: 2100000, guid: d16ca3f3b0ff44edb8bc98af8c286687, type: 2}
   fluidMaterial: {fileID: 2100000, guid: 29a7ed8ac869b4177a79933287fb9de8, type: 2}
+--- !u!114 &254562078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254562072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7614b2a0602cb784ba4c978935b4a282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &266698310
 GameObject:
   m_ObjectHideFlags: 0
@@ -13932,7 +13944,6 @@ GameObject:
   - component: {fileID: 739458237}
   - component: {fileID: 739458236}
   - component: {fileID: 739458235}
-  - component: {fileID: 739458238}
   m_Layer: 0
   m_Name: Spring2
   m_TagString: Untagged
@@ -13969,9 +13980,9 @@ MonoBehaviour:
   platformAnchorOffset: {x: 0, y: -0.5, z: 0}
   loadAnchorOffset: {x: 0, y: 0.5, z: 0}
   scale: 0.1
-  constant: 20
-  restLength: 0.75
-  dampeningCoefficient: 0.4
+  constant: 100
+  restLength: 0.5
+  dampeningCoefficient: 1
 --- !u!23 &739458236
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14013,21 +14024,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 739458233}
   m_Mesh: {fileID: 0}
---- !u!54 &739458238
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 739458233}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &807223865
 GameObject:
   m_ObjectHideFlags: 0
@@ -14175,7 +14171,6 @@ GameObject:
   - component: {fileID: 894466260}
   - component: {fileID: 894466259}
   - component: {fileID: 894466258}
-  - component: {fileID: 894466261}
   m_Layer: 0
   m_Name: Spring1
   m_TagString: Untagged
@@ -14212,9 +14207,9 @@ MonoBehaviour:
   platformAnchorOffset: {x: 0, y: -0.5, z: 0}
   loadAnchorOffset: {x: 0, y: 0.5, z: 0}
   scale: 0.1
-  constant: 20
-  restLength: 0.75
-  dampeningCoefficient: 0.4
+  constant: 100
+  restLength: 0.5
+  dampeningCoefficient: 1
 --- !u!23 &894466259
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14256,21 +14251,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 894466256}
   m_Mesh: {fileID: 0}
---- !u!54 &894466261
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 894466256}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &901103311
 GameObject:
   m_ObjectHideFlags: 0
@@ -14847,8 +14827,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1181185198
-BoxCollider:
+--- !u!135 &1181185198
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -14857,7 +14837,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1181185199
 MeshFilter:
@@ -15844,7 +15824,6 @@ GameObject:
   - component: {fileID: 1745053931}
   - component: {fileID: 1745053930}
   - component: {fileID: 1745053929}
-  - component: {fileID: 1745053932}
   m_Layer: 0
   m_Name: Spring3
   m_TagString: Untagged
@@ -15881,9 +15860,9 @@ MonoBehaviour:
   platformAnchorOffset: {x: 0, y: -0.5, z: 0}
   loadAnchorOffset: {x: 0, y: 0.5, z: 0}
   scale: 0.1
-  constant: 20
-  restLength: 0.75
-  dampeningCoefficient: 0.4
+  constant: 100
+  restLength: 0.5
+  dampeningCoefficient: 1
 --- !u!23 &1745053930
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15925,21 +15904,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1745053927}
   m_Mesh: {fileID: 0}
---- !u!54 &1745053932
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1745053927}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1824578515
 GameObject:
   m_ObjectHideFlags: 0
@@ -16002,7 +15966,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e1cfb97847c153499f2437f05b1e3cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16121,8 +16085,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1871314558
-BoxCollider:
+--- !u!135 &1871314558
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -16131,7 +16095,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1871314559
 MeshFilter:
@@ -16211,7 +16175,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e1cfb97847c153499f2437f05b1e3cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

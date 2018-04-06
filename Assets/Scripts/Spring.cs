@@ -66,7 +66,25 @@ public class Spring : MonoBehaviour
         // F = -k * x
         forceDirection.Normalize();
         Vector3 force = forceDirection * (-constant * stretchLength) - dampeningCoefficient * load.GetComponent<Rigidbody>().velocity;
-        this.load.GetComponent<Rigidbody>().AddForce(force + gravity);
+
+        // Apply force on the rigidbody based on the inverse masses
+        if (this.platform.GetComponent<FixedJoint>())
+        {
+            this.load.GetComponent<Rigidbody>().AddForce(force + gravity);
+        }
+        else if (this.load.GetComponent<FixedJoint>())
+        {
+            this.platform.GetComponent<Rigidbody>().AddForce(-force + gravity);
+        }
+        else
+        {
+            float totalMass = this.load.GetComponent<Rigidbody>().mass + this.platform.GetComponent<Rigidbody>().mass;
+            float loadInverseMass = 1 - (this.load.GetComponent<Rigidbody>().mass / totalMass);
+            float platformInverseMass = 1 - (this.platform.GetComponent<Rigidbody>().mass / totalMass);
+
+            this.load.GetComponent<Rigidbody>().AddForce(force * loadInverseMass + gravity);
+            this.platform.GetComponent<Rigidbody>().AddForce(-force * platformInverseMass + gravity);
+        }     
     }
 
     void Render()
@@ -97,10 +115,10 @@ public class Spring : MonoBehaviour
             4, 3, 1,
 
             // Load pyramid
-            9, 6, 5,
-            9, 5, 7,
-            9, 7, 8,
-            9, 8, 6,
+            9, 5, 6,
+            9, 7, 5,
+            9, 8, 7,
+            9, 6, 8,
 
             // Connector
             0, 1, 5,
