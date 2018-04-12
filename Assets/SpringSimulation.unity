@@ -22930,7 +22930,7 @@ MonoBehaviour:
   scale: 0.1
   constant: 10
   restLength: 0.5
-  dampeningCoefficient: 0.4
+  dampeningCoefficient: 0.1
   gravity: 9.8
   isRigid: 0
 --- !u!23 &1161196498
