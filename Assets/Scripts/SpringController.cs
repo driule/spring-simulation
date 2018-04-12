@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SpringController : MonoBehaviour {
 
-    public SpringJoint spring;
+    public Spring spring;
     public Rigidbody load;
     
     public Slider springCoefficientSlider;
@@ -13,7 +13,7 @@ public class SpringController : MonoBehaviour {
 
     void setSpringValues()
     {
-        this.spring.spring = this.springCoefficientSlider.value;
+        this.spring.constant = this.springCoefficientSlider.value;
         this.load.mass = this.loadMassSlider.value;
     }
 

@@ -9,11 +9,13 @@ public class Spring : MonoBehaviour
     public GameObject load;
 
     public Vector3 platformAnchorOffset;
+    public Vector3 platformAnchorRotation;
     public Vector3 loadAnchorOffset;
+    public Vector3 loadAnchorRotation;
 
     [Range(0.01f, 1.00f)]
     public float scale;
-    [Range(0.0f, 100.0f)]
+    [Range(0.0f, 500.0f)]
     public float constant;
     [Range(0.0f, 10.0f)]
     public float restLength;
@@ -22,8 +24,19 @@ public class Spring : MonoBehaviour
     [Range(0.0f, 25.0f)]
     public float gravity = 1.0f;
 
+    public bool isRigid;
+
     private Vector3 platformAnchor;
+    private Vector3 platformAnchor1;
+    private Vector3 platformAnchor2;
+    private Vector3 platformAnchor3;
+    private Vector3 platformAnchor4;
+
     private Vector3 loadAnchor;
+    private Vector3 loadAnchor1;
+    private Vector3 loadAnchor2;
+    private Vector3 loadAnchor3;
+    private Vector3 loadAnchor4;
 
     // Use this for initialization
     void Start()
@@ -45,13 +58,42 @@ public class Spring : MonoBehaviour
     {
         // Convert platform local space into global space
         Vector3 platformPoint = this.platform.transform.position + Vector3.Scale(this.platformAnchorOffset, this.platform.transform.localScale);
+        Vector3 platformPoint1 = this.platform.transform.position + Vector3.Scale(this.platformAnchorOffset, this.platform.transform.localScale) + Quaternion.Euler(this.platformAnchorRotation) * new Vector3( scale, -scale,  scale);
+        Vector3 platformPoint2 = this.platform.transform.position + Vector3.Scale(this.platformAnchorOffset, this.platform.transform.localScale) + Quaternion.Euler(this.platformAnchorRotation) * new Vector3(-scale, -scale,  scale);
+        Vector3 platformPoint3 = this.platform.transform.position + Vector3.Scale(this.platformAnchorOffset, this.platform.transform.localScale) + Quaternion.Euler(this.platformAnchorRotation) * new Vector3( scale, -scale, -scale);
+        Vector3 platformPoint4 = this.platform.transform.position + Vector3.Scale(this.platformAnchorOffset, this.platform.transform.localScale) + Quaternion.Euler(this.platformAnchorRotation) * new Vector3(-scale, -scale, -scale);
+
         var localPlatformAnchor = (this.platform.transform.rotation * (platformPoint - this.platform.transform.position)) + this.platform.transform.position;
+        var localPlatformAnchor1 = (this.platform.transform.rotation * (platformPoint1 - this.platform.transform.position)) + this.platform.transform.position;
+        var localPlatformAnchor2 = (this.platform.transform.rotation * (platformPoint2 - this.platform.transform.position)) + this.platform.transform.position;
+        var localPlatformAnchor3 = (this.platform.transform.rotation * (platformPoint3 - this.platform.transform.position)) + this.platform.transform.position;
+        var localPlatformAnchor4 = (this.platform.transform.rotation * (platformPoint4 - this.platform.transform.position)) + this.platform.transform.position;
+
         this.platformAnchor = transform.InverseTransformPoint(localPlatformAnchor);
+        this.platformAnchor1 = transform.InverseTransformPoint(localPlatformAnchor1);
+        this.platformAnchor2 = transform.InverseTransformPoint(localPlatformAnchor2);
+        this.platformAnchor3 = transform.InverseTransformPoint(localPlatformAnchor3);
+        this.platformAnchor4 = transform.InverseTransformPoint(localPlatformAnchor4);
 
         // Convert load local space into global space
         Vector3 loadPoint = this.load.transform.position + Vector3.Scale(this.loadAnchorOffset, this.load.transform.localScale);
+        Vector3 loadPoint1 = this.load.transform.position + Vector3.Scale(this.loadAnchorOffset, this.load.transform.localScale) + Quaternion.Euler(this.loadAnchorRotation) * new Vector3( scale,  scale,  scale);
+        Vector3 loadPoint2 = this.load.transform.position + Vector3.Scale(this.loadAnchorOffset, this.load.transform.localScale) + Quaternion.Euler(this.loadAnchorRotation) * new Vector3(-scale,  scale,  scale);
+        Vector3 loadPoint3 = this.load.transform.position + Vector3.Scale(this.loadAnchorOffset, this.load.transform.localScale) + Quaternion.Euler(this.loadAnchorRotation) * new Vector3( scale,  scale, -scale);
+        Vector3 loadPoint4 = this.load.transform.position + Vector3.Scale(this.loadAnchorOffset, this.load.transform.localScale) + Quaternion.Euler(this.loadAnchorRotation) * new Vector3(-scale,  scale, -scale);
+
         var localLoadAnchor = (this.load.transform.rotation * (loadPoint - this.load.transform.position)) + this.load.transform.position;
+        var localLoadAnchor1 = (this.load.transform.rotation * (loadPoint1 - this.load.transform.position)) + this.load.transform.position;
+        var localLoadAnchor2 = (this.load.transform.rotation * (loadPoint2 - this.load.transform.position)) + this.load.transform.position;
+        var localLoadAnchor3 = (this.load.transform.rotation * (loadPoint3 - this.load.transform.position)) + this.load.transform.position;
+        var localLoadAnchor4 = (this.load.transform.rotation * (loadPoint4 - this.load.transform.position)) + this.load.transform.position;
+
         this.loadAnchor = transform.InverseTransformPoint(localLoadAnchor);
+        this.loadAnchor1 = transform.InverseTransformPoint(localLoadAnchor1);
+        this.loadAnchor2 = transform.InverseTransformPoint(localLoadAnchor2);
+        this.loadAnchor3 = transform.InverseTransformPoint(localLoadAnchor3);
+        this.loadAnchor4 = transform.InverseTransformPoint(localLoadAnchor4);
+
     }
 
     void CalculateForce()
@@ -96,16 +138,16 @@ public class Spring : MonoBehaviour
 
         Vector3[] vertices = new Vector3[]
         {
-            this.platformAnchor + new Vector3(  this.scale, -this.scale,  this.scale),  //left top front, 0
-            this.platformAnchor + new Vector3( -this.scale, -this.scale,  this.scale),  //right top front, 1
-            this.platformAnchor + new Vector3(  this.scale, -this.scale, -this.scale),  //left bottom front, 2
-            this.platformAnchor + new Vector3( -this.scale, -this.scale, -this.scale),  //right bottom front, 3
+            this.platformAnchor1,   //left top front, 0
+            this.platformAnchor2,   //right top front, 1
+            this.platformAnchor3,   //left bottom front, 2
+            this.platformAnchor4,   //right bottom front, 3
             this.platformAnchor,    //top, 4
-
-            this.loadAnchor + new Vector3(  this.scale,  this.scale,  this.scale),  //left top front, 5
-            this.loadAnchor + new Vector3( -this.scale,  this.scale,  this.scale),  //right top front, 6
-            this.loadAnchor + new Vector3(  this.scale,  this.scale, -this.scale),  //left bottom front, 7
-            this.loadAnchor + new Vector3( -this.scale,  this.scale, -this.scale),  //right bottom front, 8
+ 
+            this.loadAnchor1,       //left top front, 5
+            this.loadAnchor2,       //right top front, 6
+            this.loadAnchor3,       //left bottom front, 7
+            this.loadAnchor4,       //right bottom front, 8
             this.loadAnchor,        //bottom, 9
         };
 
@@ -140,6 +182,9 @@ public class Spring : MonoBehaviour
         spring.mesh.RecalculateNormals();
         spring.mesh.RecalculateBounds();
 
-        //springCollider.sharedMesh = spring.mesh;
+        if (isRigid)
+        {
+            springCollider.sharedMesh = spring.mesh;
+        }
     }
 }

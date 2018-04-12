@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlyCamera : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
 
     float mainSpeed = 10.0f;    //regular speed

@@ -336,17 +336,13 @@
     <Compile Include="Assets\Obi\Scripts\Utils\ObiParticleHandle.cs" />
     <Compile Include="Assets\Obi\Scripts\Utils\ObiProfiler.cs" />
     <Compile Include="Assets\Obi\Scripts\Utils\ObiUtils.cs" />
-    <Compile Include="Assets\Scripts\BezierCurve.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\FluidController.cs" />
-    <Compile Include="Assets\Scripts\FlyCamera.cs" />
     <Compile Include="Assets\Scripts\GameObjectDragger.cs" />
-    <Compile Include="Assets\Scripts\Rope.cs" />
     <Compile Include="Assets\Scripts\Spring.cs" />
     <Compile Include="Assets\Scripts\SpringController.cs" />
-    <Compile Include="Assets\Scripts\SpringMeshRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Obi\CHANGELOG_fluid.txt" />
     <None Include="Assets\Obi\Editor\Resources\DistanceFieldPreview.shader" />
     <None Include="Assets\Obi\Editor\Resources\EditorLineShader.shader" />
     <None Include="Assets\Obi\Editor\Resources\EditorParticle.shader" />
