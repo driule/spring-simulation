@@ -110,7 +110,7 @@ public class Spring : MonoBehaviour
         forceDirection.Normalize();
         Vector3 force = forceDirection * (-constant * stretchLength) - dampeningCoefficient * load.GetComponent<Rigidbody>().velocity;
 
-        // Apply force on the rigidbody based on the inverse masses
+        // Check if force is only for the load or the platform
         if (this.platform.GetComponent<FixedJoint>())
         {
             this.load.GetComponent<Rigidbody>().AddForce(force);
@@ -119,6 +119,7 @@ public class Spring : MonoBehaviour
         {
             this.platform.GetComponent<Rigidbody>().AddForce(-force);
         }
+		// Apply force on the rigidbody based on the inverse masses
         else
         {
             float totalMass = this.load.GetComponent<Rigidbody>().mass + this.platform.GetComponent<Rigidbody>().mass;
@@ -128,6 +129,8 @@ public class Spring : MonoBehaviour
             this.load.GetComponent<Rigidbody>().AddForce(force * loadInverseMass);
             this.platform.GetComponent<Rigidbody>().AddForce(-force * platformInverseMass);
         }
+		
+		// Apply gravity to dampen spring (be sure to uncheck gravity from unity's rigidbody)
         this.load.GetComponent<Rigidbody>().AddForce(new Vector3(0, -gravity, 0));
     }
 
@@ -136,6 +139,7 @@ public class Spring : MonoBehaviour
         MeshFilter spring = GetComponent<MeshFilter>();
         MeshCollider springCollider = GetComponent<MeshCollider>();
 
+		// Set points to be used as the mesh
         Vector3[] vertices = new Vector3[]
         {
             this.platformAnchor1,   //left top front, 0
@@ -151,6 +155,7 @@ public class Spring : MonoBehaviour
             this.loadAnchor,        //bottom, 9
         };
 
+		// Create triangles to form polygons
         int[] triangles = new int[]
         {
             // Platform pyramid
@@ -176,12 +181,14 @@ public class Spring : MonoBehaviour
             0, 5, 7,
         };
 
+		// Recalculate all the meshes from points
         spring.mesh.Clear();
         spring.mesh.vertices = vertices;
         spring.mesh.triangles = triangles;
         spring.mesh.RecalculateNormals();
         spring.mesh.RecalculateBounds();
 
+		// To enable spring mesh collision
         if (isRigid)
         {
             springCollider.sharedMesh = spring.mesh;
