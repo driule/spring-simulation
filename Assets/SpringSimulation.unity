@@ -605,9 +605,9 @@ MonoBehaviour:
   platform: {fileID: 794324674}
   load: {fileID: 1451584752}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 135, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 135, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -715,9 +715,9 @@ MonoBehaviour:
   platform: {fileID: 359926704}
   load: {fileID: 160792911}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: -90, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: -90, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -1072,9 +1072,9 @@ MonoBehaviour:
   platform: {fileID: 2078735649}
   load: {fileID: 1695962777}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: -90, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: -90, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -1217,9 +1217,9 @@ MonoBehaviour:
   platform: {fileID: 977742596}
   load: {fileID: 794324674}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: -45}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: -45}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -1527,9 +1527,9 @@ MonoBehaviour:
   platform: {fileID: 977955974}
   load: {fileID: 1189473543}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: -90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: -90}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -1803,9 +1803,9 @@ MonoBehaviour:
   platform: {fileID: 314825090}
   load: {fileID: 1710342431}
   platformAnchorOffset: {x: -0.5, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: -90}
   loadAnchorOffset: {x: 0.5, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: -90}
   scale: 0.2
   constant: 100
   restLength: 2
@@ -2104,27 +2104,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emitter: {fileID: 196381479}
   color: {r: 0.9264706, g: 0.98782957, b: 1, a: 0.153}
-  particleSize: 0.27144176
+  particleSize: 0.24264276
   distribution:
   - position: {x: -0.125, y: -0.125, z: -0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: -0.125, y: -0.125, z: 0}
     velocity: {x: 0, y: 0, z: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
   - position: {x: -0.125, y: -0.125, z: 0.125}
     velocity: {x: 0, y: 0, z: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: -0.125, y: 0, z: -0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: -0.125, y: 0, z: 0}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: -0.125, y: 0, z: 0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
   - position: {x: -0.125, y: 0.125, z: -0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: -0.125, y: 0.125, z: 0}
     velocity: {x: 0, y: 0, z: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
   - position: {x: -0.125, y: 0.125, z: 0.125}
     velocity: {x: 0, y: 0, z: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0, y: -0.125, z: -0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0, y: -0.125, z: 0}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0, y: -0.125, z: 0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0, y: 0, z: -0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0, y: 0, z: 0}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0, y: 0, z: 0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0, y: 0.125, z: -0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0, y: 0.125, z: 0}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0, y: 0.125, z: 0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
   - position: {x: 0.125, y: -0.125, z: -0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0.125, y: -0.125, z: 0}
     velocity: {x: 0, y: 0, z: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
   - position: {x: 0.125, y: -0.125, z: 0.125}
     velocity: {x: 0, y: 0, z: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0.125, y: 0, z: -0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0.125, y: 0, z: 0}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0.125, y: 0, z: 0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
   - position: {x: 0.125, y: 0.125, z: -0.125}
+    velocity: {x: 0, y: 0, z: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - position: {x: 0.125, y: 0.125, z: 0}
     velocity: {x: 0, y: 0, z: 1}
     color: {r: 1, g: 1, b: 1, a: 1}
   - position: {x: 0.125, y: 0.125, z: 0.125}
@@ -14272,9 +14329,9 @@ MonoBehaviour:
   platform: {fileID: 160792911}
   load: {fileID: 934730726}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: -90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: -90}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -14635,9 +14692,9 @@ MonoBehaviour:
   platform: {fileID: 992143810}
   load: {fileID: 977955974}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: -45, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: -45, z: 90}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -14911,9 +14968,9 @@ MonoBehaviour:
   platform: {fileID: 57392594}
   load: {fileID: 900637660}
   platformAnchorOffset: {x: -0.5, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: -90}
   loadAnchorOffset: {x: 0.5, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: -90}
   scale: 0.2
   constant: 100
   restLength: 2
@@ -15555,9 +15612,9 @@ MonoBehaviour:
   platform: {fileID: 992143810}
   load: {fileID: 359926704}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 45}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 45}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -16015,9 +16072,9 @@ MonoBehaviour:
   platform: {fileID: 884573335}
   load: {fileID: 1125065797}
   platformAnchorOffset: {x: 0, y: 0, z: 0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 90, z: -90}
   loadAnchorOffset: {x: 0, y: 0, z: -0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 90, z: -90}
   scale: 0.2
   constant: 500
   restLength: 2
@@ -16359,9 +16416,9 @@ MonoBehaviour:
   platform: {fileID: 934730726}
   load: {fileID: 1206334519}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 90, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 90, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -16806,9 +16863,9 @@ MonoBehaviour:
   platform: {fileID: 343466994}
   load: {fileID: 929010522}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: -135, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: -135, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -16916,9 +16973,9 @@ MonoBehaviour:
   platform: {fileID: 1451584752}
   load: {fileID: 977742596}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: -45, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: -45, z: 90}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -17526,9 +17583,9 @@ MonoBehaviour:
   platform: {fileID: 301565264}
   load: {fileID: 57392594}
   platformAnchorOffset: {x: 0.5, y: 0, z: 0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: -45, z: 90}
   loadAnchorOffset: {x: -0.5, y: 0, z: -0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: -45, z: 90}
   scale: 0.2
   constant: 100
   restLength: 2.828
@@ -17853,9 +17910,9 @@ MonoBehaviour:
   platform: {fileID: 746511976}
   load: {fileID: 977742596}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: -90, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: -90, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -17991,9 +18048,9 @@ MonoBehaviour:
   platform: {fileID: 1030427391}
   load: {fileID: 1710342431}
   platformAnchorOffset: {x: -0.5, y: 0, z: 0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 45, z: -90}
   loadAnchorOffset: {x: 0.5, y: 0, z: -0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 45, z: -90}
   scale: 0.2
   constant: 100
   restLength: 2.828
@@ -18101,9 +18158,9 @@ MonoBehaviour:
   platform: {fileID: 1406005915}
   load: {fileID: 1262240529}
   platformAnchorOffset: {x: 0.5, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 90}
   loadAnchorOffset: {x: -0.5, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 90}
   scale: 0.2
   constant: 500
   restLength: 2
@@ -18259,9 +18316,9 @@ MonoBehaviour:
   platform: {fileID: 1893557104}
   load: {fileID: 977955974}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: -90, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: -90, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -18481,9 +18538,9 @@ MonoBehaviour:
   platform: {fileID: 1695962777}
   load: {fileID: 794324674}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: -90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: -90}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -18811,9 +18868,9 @@ MonoBehaviour:
   platform: {fileID: 934730726}
   load: {fileID: 992143810}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 135, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 135, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -19226,9 +19283,9 @@ MonoBehaviour:
   platform: {fileID: 992143810}
   load: {fileID: 1893557104}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 90}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -19390,9 +19447,9 @@ MonoBehaviour:
   platform: {fileID: 301565264}
   load: {fileID: 1030427391}
   platformAnchorOffset: {x: 0.5, y: -0.5, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 45}
   loadAnchorOffset: {x: -0.5, y: 0.5, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 45}
   scale: 0.2
   constant: 100
   restLength: 2.828
@@ -19612,9 +19669,9 @@ MonoBehaviour:
   platform: {fileID: 1406005915}
   load: {fileID: 1329166909}
   platformAnchorOffset: {x: 0, y: 0, z: -0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 90, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 90, z: 90}
   scale: 0.2
   constant: 500
   restLength: 1
@@ -20021,9 +20078,9 @@ MonoBehaviour:
   platform: {fileID: 1451584752}
   load: {fileID: 977742596}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: -45, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: -45, z: 90}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -20191,9 +20248,9 @@ MonoBehaviour:
   platform: {fileID: 1910790884}
   load: {fileID: 57392594}
   platformAnchorOffset: {x: 0, y: 0, z: 0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: -90, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: -0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: -90, y: 0, z: 0}
   scale: 0.2
   constant: 100
   restLength: 2
@@ -20633,9 +20690,9 @@ MonoBehaviour:
   platform: {fileID: 977742596}
   load: {fileID: 929010522}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: -90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: -90}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -20743,9 +20800,9 @@ MonoBehaviour:
   platform: {fileID: 2078735649}
   load: {fileID: 794324674}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 45, z: -90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 45, z: -90}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -21541,9 +21598,9 @@ MonoBehaviour:
   platform: {fileID: 992143810}
   load: {fileID: 977955974}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: -45, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: -45, z: 90}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -21864,9 +21921,9 @@ MonoBehaviour:
   platform: {fileID: 719799977}
   load: {fileID: 492871980}
   platformAnchorOffset: {x: 0, y: 0, z: -0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 90, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 90, z: 90}
   scale: 0.2
   constant: 500
   restLength: 2
@@ -21988,9 +22045,9 @@ MonoBehaviour:
   platform: {fileID: 1189473543}
   load: {fileID: 992143810}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 90, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 90, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -22084,9 +22141,9 @@ MonoBehaviour:
   platform: {fileID: 900637660}
   load: {fileID: 301565264}
   platformAnchorOffset: {x: 0, y: 0, z: -0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 90, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 90, y: 0, z: 0}
   scale: 0.2
   constant: 100
   restLength: 2
@@ -22194,9 +22251,9 @@ MonoBehaviour:
   platform: {fileID: 498367962}
   load: {fileID: 884573335}
   platformAnchorOffset: {x: 0, y: 0, z: 0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 90, z: -90}
   loadAnchorOffset: {x: 0, y: 0, z: -0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 90, z: -90}
   scale: 0.2
   constant: 500
   restLength: 2
@@ -22608,9 +22665,9 @@ MonoBehaviour:
   platform: {fileID: 1451584752}
   load: {fileID: 746511976}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 90}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -22718,9 +22775,9 @@ MonoBehaviour:
   platform: {fileID: 746511976}
   load: {fileID: 1695962777}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 135, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 135, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -22828,9 +22885,9 @@ MonoBehaviour:
   platform: {fileID: 977955974}
   load: {fileID: 934730726}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: -45}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: -45}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -23035,9 +23092,9 @@ MonoBehaviour:
   platform: {fileID: 1329166909}
   load: {fileID: 173518061}
   platformAnchorOffset: {x: 0.5, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 90}
   loadAnchorOffset: {x: -0.5, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 90}
   scale: 0.2
   constant: 500
   restLength: 2
@@ -23257,9 +23314,9 @@ MonoBehaviour:
   platform: {fileID: 301565264}
   load: {fileID: 57392594}
   platformAnchorOffset: {x: 0.5, y: 0, z: 0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: -45, z: 90}
   loadAnchorOffset: {x: -0.5, y: 0, z: -0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: -45, z: 90}
   scale: 0.2
   constant: 100
   restLength: 2.828
@@ -23795,9 +23852,9 @@ MonoBehaviour:
   platform: {fileID: 57392594}
   load: {fileID: 1710342431}
   platformAnchorOffset: {x: -0.5, y: -0.5, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: -45}
   loadAnchorOffset: {x: 0.5, y: 0.5, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: -45}
   scale: 0.2
   constant: 100
   restLength: 2.828
@@ -24119,9 +24176,9 @@ MonoBehaviour:
   platform: {fileID: 1262240529}
   load: {fileID: 780876122}
   platformAnchorOffset: {x: 0.5, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 90}
   loadAnchorOffset: {x: -0.5, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 90}
   scale: 0.2
   constant: 500
   restLength: 2
@@ -24375,9 +24432,9 @@ MonoBehaviour:
   platform: {fileID: 173518061}
   load: {fileID: 1994017976}
   platformAnchorOffset: {x: 0.5, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 90}
   loadAnchorOffset: {x: -0.5, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 90}
   scale: 0.2
   constant: 500
   restLength: 2
@@ -24685,9 +24742,9 @@ MonoBehaviour:
   platform: {fileID: 746511976}
   load: {fileID: 343466994}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: -45}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: -45}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -24781,9 +24838,9 @@ MonoBehaviour:
   platform: {fileID: 1030427391}
   load: {fileID: 314825090}
   platformAnchorOffset: {x: 0, y: 0, z: 0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: -90, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: -0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: -90, y: 0, z: 0}
   scale: 0.2
   constant: 100
   restLength: 2
@@ -24991,9 +25048,9 @@ MonoBehaviour:
   platform: {fileID: 1451584752}
   load: {fileID: 2078735649}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 45}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 45}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -25101,9 +25158,9 @@ MonoBehaviour:
   platform: {fileID: 343466994}
   load: {fileID: 2078735649}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 90}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -25396,9 +25453,9 @@ MonoBehaviour:
   platform: {fileID: 719799977}
   load: {fileID: 1329166909}
   platformAnchorOffset: {x: 0.5, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 90}
   loadAnchorOffset: {x: -0.5, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 90}
   scale: 0.2
   constant: 500
   restLength: 2
@@ -25764,9 +25821,9 @@ MonoBehaviour:
   platform: {fileID: 498367962}
   load: {fileID: 719799977}
   platformAnchorOffset: {x: 0, y: 0, z: -0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 90, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 90, z: 90}
   scale: 0.2
   constant: 500
   restLength: 2
@@ -26038,9 +26095,9 @@ MonoBehaviour:
   platform: {fileID: 1710342431}
   load: {fileID: 301565264}
   platformAnchorOffset: {x: 0, y: 0.5, z: -0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 135, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: -0.5, z: 0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 135, y: 0, z: 0}
   scale: 0.2
   constant: 100
   restLength: 2.828
@@ -26148,9 +26205,9 @@ MonoBehaviour:
   platform: {fileID: 492871980}
   load: {fileID: 972784935}
   platformAnchorOffset: {x: 0, y: 0, z: -0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 90, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 90, z: 90}
   scale: 0.2
   constant: 500
   restLength: 2
@@ -26718,9 +26775,9 @@ MonoBehaviour:
   platform: {fileID: 1710342431}
   load: {fileID: 432940411}
   platformAnchorOffset: {x: 0, y: 0, z: -0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 90, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 90, y: 0, z: 0}
   scale: 0.2
   constant: 100
   restLength: 2
@@ -27183,9 +27240,9 @@ MonoBehaviour:
   platform: {fileID: 359926704}
   load: {fileID: 977955974}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: -135, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: -135, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -27293,9 +27350,9 @@ MonoBehaviour:
   platform: {fileID: 343466994}
   load: {fileID: 1695962777}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: -45, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: -45, z: 90}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -27513,9 +27570,9 @@ MonoBehaviour:
   platform: {fileID: 929010522}
   load: {fileID: 1451584752}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 90, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 90, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -27735,9 +27792,9 @@ MonoBehaviour:
   platform: {fileID: 929010522}
   load: {fileID: 1695962777}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 45}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 45}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -27831,9 +27888,9 @@ MonoBehaviour:
   platform: {fileID: 432940411}
   load: {fileID: 1030427391}
   platformAnchorOffset: {x: 0.5, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 90}
   loadAnchorOffset: {x: -0.5, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 90}
   scale: 0.2
   constant: 100
   restLength: 2
@@ -28302,9 +28359,9 @@ MonoBehaviour:
   platform: {fileID: 794324674}
   load: {fileID: 343466994}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 90, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 90, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -28537,9 +28594,9 @@ MonoBehaviour:
   platform: {fileID: 746511976}
   load: {fileID: 929010522}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 45, z: -90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 45, z: -90}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -28633,9 +28690,9 @@ MonoBehaviour:
   platform: {fileID: 301565264}
   load: {fileID: 1910790884}
   platformAnchorOffset: {x: 0.5, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 90}
   loadAnchorOffset: {x: -0.5, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 90}
   scale: 0.2
   constant: 100
   restLength: 2
@@ -28757,9 +28814,9 @@ MonoBehaviour:
   platform: {fileID: 359926704}
   load: {fileID: 934730726}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 45, z: -90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 45, z: -90}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -28965,9 +29022,9 @@ MonoBehaviour:
   platform: {fileID: 1030427391}
   load: {fileID: 57392594}
   platformAnchorOffset: {x: 0, y: 0.5, z: 0.5}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: -135, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: -0.5, z: -0.5}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: -135, y: 0, z: 0}
   scale: 0.2
   constant: 100
   restLength: 2.828
@@ -29089,9 +29146,9 @@ MonoBehaviour:
   platform: {fileID: 1206334519}
   load: {fileID: 359926704}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 90}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 90}
   scale: 0.2
   constant: 500
   restLength: 3
@@ -29199,9 +29256,9 @@ MonoBehaviour:
   platform: {fileID: 2078735649}
   load: {fileID: 977742596}
   platformAnchorOffset: {x: 0, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: -135, y: 0, z: 0}
   loadAnchorOffset: {x: 0, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: -135, y: 0, z: 0}
   scale: 0.2
   constant: 500
   restLength: 4.2624
@@ -29295,9 +29352,9 @@ MonoBehaviour:
   platform: {fileID: 498367962}
   load: {fileID: 1406005915}
   platformAnchorOffset: {x: 0.5, y: 0, z: 0}
-  platformAnchorRotation: {x: 0, y: 0, z: 0}
+  platformAnchorRotation: {x: 0, y: 0, z: 90}
   loadAnchorOffset: {x: -0.5, y: 0, z: 0}
-  loadAnchorRotation: {x: 0, y: 0, z: 0}
+  loadAnchorRotation: {x: 0, y: 0, z: 90}
   scale: 0.2
   constant: 500
   restLength: 2
